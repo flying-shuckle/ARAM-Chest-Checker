@@ -1,0 +1,51 @@
+{
+  "name": "desktop-aram-chest-checker",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./src/electron-starter.js",
+  "homepage": "./",
+  "dependencies": {
+    "lcu-connector": "^2.1.2",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  },
+  "scripts": {
+    "dev": "nf start -p 3001",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "build-mac": "electron-packager . aram-chest-checker --platform='darwin' --arch='x64'  --overwrite --ignore='public' --ignore='.gitignore' --ignore='Procfile' --ignore='yarn.lock' --ignore='.git' --ignore='package-lock.json'",
+    "build-win": "electron-packager . aram-chest-checker --platform='win32' --arch='x64'  --overwrite --ignore='public' --ignore='.gitignore' --ignore='Procfile' --ignore='yarn.lock' --ignore='.git' --ignore='package-lock.json'"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "3.0.2",
+    "electron": "^6.0.10",
+    "electron-packager": "^14.0.6",
+    "foreman": "^3.0.1",
+    "react": "^16.10.0",
+    "react-dom": "^16.10.0",
+    "react-scripts": "3.1.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
